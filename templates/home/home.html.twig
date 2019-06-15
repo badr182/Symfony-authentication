@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} home {% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        {% for label, messages in app.flashes %}
+            {% for message in messages %}
+                <div class="alert alert-{{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+        <h2> Home !!</h2>
+    </div>
+{% endblock %}
